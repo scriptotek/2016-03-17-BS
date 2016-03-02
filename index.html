@@ -1,19 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS.
-venue: "University of Oslo"
+venue: "Biblioteksløyd : Universitetsbiblioteket i Oslo"
 address: "Undervisningsrom UE26, Niels Henrik Abels hus, Moltke Moes vei 35, 0851 Oslo"
 country: "no"
 language: "nb"
 latlng: "59.939673, 10.723284"
 humandate: "17.–18. mars 2016"
-humantime: "9:00 am - 4:30 pm"
+humantime: "9:00–15:30"
 startdate: 2016-03-17
 enddate: 2016-03-18
-instructor: ["tba"]
-helper: ["tba"]
-contact: "tba"
+instructor: ["Live Rasmussen", "Leon du Toit", "Elin Stangeland", "Live Kvale", "Kyrre T. Låberg", "Ahmed Abdi Mohammed", "Dan Michael O. Heggø"]
+contact: "l.h.kvale@ub.uio.no"
 etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
+enrollment: https://nettskjema.uio.no/answer/soid.html
 ---
 <!--
   HEADER
@@ -42,7 +42,7 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
 </iframe>
 {% endif %}
 
-<h2 id="general">General Information</h2>
+<h2 id="general">Generell informasjon</h2>
 
 <!--
   INTRODUCTION
@@ -51,28 +51,14 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
   the pitch.
 -->
 <p>
-  Bli med på biblioteksløyd for å bedre din digitale kompetanse! Møt andre (litt) nerdete kolleger
-  fra biblioteksektoren for å lære om begreper og dataverktøy som kan gi deg ideer til hvordan din
-  arbeidshverdag som bibliotekar kan enklere og mer effektiv. 
+  Bli med på biblioteksløyd for å bedre din digitale kompetanse! Møt andre (litt) nerdete kolleger fra biblioteksektoren for å lære om begreper og dataverktøy som kan gi deg ideer til hvordan arbeidshverdagen din som bibliotekar kan bli morsommere og mer effektiv (men ikke nødvendigvis enklere).
 </p>
-
 <p>
-  Jobber du med lange lister eller store regneark? Har du vært borti koding/programmering,
-  men mangler kontekst på hvordan få dette til å virke videre? Føler du at du gjerne skulle
-  forstått mer når din lokale IT-person henter fram kommandolinja og trykker i vei? 
+  Jobber du med lange lister eller store regneark? XML-filer? Kanskje filer som trenger litt vasking? Har du vært borti koding/programmering, men får ikke brukt det i hverdagen på grunn av praktiske problemer? Føler du at du gjerne skulle forstått mer når din lokale IT-person henter fram kommandolinja og knaster i vei?
 </p>
-
 <p>
-  I så fall er du ikke alene! Vi ser at mange biblioteksansatte er nysgjerrige på teknologi,
-  men ikke får satt av tiden som trengs for å utforske - sett av disse to dagene til å lære
-  mer og styrke din indre nerd.
+  I så fall er du ikke alene! Vi ser at mange bibliotekansatte er nysgjerrige på teknologi, men ikke får satt av tiden som trengs for å utforske – sett av disse to dagene til å lære mer og styrke din indre nerd.
 </p>
-
-<p>
-  Vi starter fra scratch og skal i løpet av kurset jobbe med begreper, bli kjent med verktøy
-  for versjonshåndtering, kikke litt på kode, samt lære om hvor man gjør av ting for at det hele skal virke. 
-</p>
-
 
 <!--
   
@@ -100,7 +86,7 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
   workshop is only open to people from a particular institution.
 -->
 <p id="who">
-  <strong>Hvem:</strong>
+  <strong>Målgruppe:</strong>
   Bibliotekarer og bibliotekansatte av alle slag.
   <strong>Vi forventer ingen forhåndskjennskap til verktøyene som presenteres.</strong>
 </p>
@@ -117,9 +103,9 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
 <p id="where">
   <strong>Hvor:</strong>
   {{page.address}}.
-  Get directions with
+  Vis i
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
+  eller
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
@@ -130,11 +116,19 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
   Modify the block below if there are any special requirements.
 -->
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>Bring:</strong> Deltakere må ta med egen laptop med litt programvare forhåndsinstallert
+  (listet <a href="#setup">under</a>). Vi følger
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+</p>
+
+<p id="instructors">
+  <strong>Snekkermestere/kursholdere:</strong>
+  {% if page.instructor %}
+  {{page.instructor | join: ', ' %}}
+  {% else %}
+  to be announced.
+  {% endif %}
 </p>
 
 <!--
@@ -145,14 +139,14 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
   used.
 -->
 <p id="contact">
-  <strong>Contact</strong>:
-  Please mail
+  <strong>Spørsmål</strong>:
+  Kontakt
   {% if page.contact %}
     <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
   {% else %}
     <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
   {% endif %}
-  for more information.
+  for mer informasjon.
 </p>
 
 <!--
@@ -160,8 +154,7 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
 -->
 <p id="registration">
   <strong>Påmelding</strong>:
-  Mer info på <a href="http://www.ub.uio.no/kurs/enkeltstaende/bibsloid/index.html">siden på ub.uio.no</a>.
-  Meld deg på <a href="https://nettskjema.uio.no/answer/soid.html">her</a>.
+  Meld deg på <a href="{{page.enrollment}}">her</a>.
 </p>
 
 <hr/>
@@ -173,36 +166,42 @@ etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">Program</h2>
 
 <!-- DO NOT EDIT SURVEY LINKS -->
-<p><em>Surveys</em></p>
+<!--<p><em>Surveys</em></p>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a></p>
 <p><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></p>
+-->
+
+<em>Programmet er ikke hogget i stein (eller skjært ut ut i tre) enda!</em>
 
 <div class="row">
   <div class="col-md-6">
     <h3>17. mars</h3>
     <table class="table table-striped">
       <tr> <td>Arrival</td>  <td><!--<a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a>--></td> </tr>
-      <tr> <td>09:00</td>  <td>Intro til biblioteksløyd (Live, Elin)</td> </tr>
+      <tr> <td>09:00</td>  <td>Intro til biblioteksløyd (Live, Live, Elin)</td> </tr>
       <tr> <td>09:30</td>  <td>Software and data curation, version control, Git and GitHub (Leon)</td> </tr>
-      <tr> <td>11:15</td>  <td>Coffee + jargon busting</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Working with data / text files using Sublime Text, regexp (DM)</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>11:15</td>  <td>Coffee(?) + jargon busting</td> </tr>
+      <tr> <td>12:00</td>  <td>Strekke på beina / lunsj?</td> </tr>
+      <tr> <td>12:45</td>  <td>Navigating and manipulating plain text files (including data formats like xml, json)
+      using Sublime Text (DM)</td> </tr>
+      <tr> <td>13:45</td>  <td>Kaffe(?)</td> </tr>
+      <tr> <td>14:15</td>  <td>Regular expressions (DM)</td> </tr>
+      <tr> <td>15:15</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>18. mars</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>(Over)leve på UiO og med Windows: Shell, WinSCP, Putty, GitHub Desktop</td> </tr>
-      <tr> <td>10:00</td>  <td>Coffee</td> </tr>
-      <tr> <td>10:15</td>  <td>Praktisk GitHub: Kloning, redigering</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch Break</td> </tr>
+      <tr> <td>09:00</td>  <td>(Over)leve på UiO og med Windows: Kommandolinja, WinSCP, Putty, GitHub Desktop (?)</td> </tr>
+      <tr> <td>10:15</td>  <td>Kaffepause(?)</td> </tr>
+      <tr> <td>10:30</td>  <td>Praktisk oppgave med kloning fra GitHub, redigering, kjøring, osv.</td> </tr>
+      <tr> <td>11:45</td>  <td>Strekke på beina / lunsj?</td> </tr>
       <tr> <td>12:30</td>  <td>OpenRefine??</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>13:45</td>  <td>Wrap-up? Eller litt om XPath og eXist først?</td> </tr>
       <tr> <td>Dismissal</td>  <td><!--<a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a>--></td> </tr>
     </table>
   </div>

@@ -42,12 +42,7 @@
               </div>
               <div class="col-md-6">
                 <p>
-                <strong>Instructors:</strong>
-                {% if page.instructor %}
-                {{page.instructor | join: ', ' %}}
-                {% else %}
-                to be announced.
-                {% endif %}
+                  <a href="{{page.enrollment}}">Påmelding</a>
                 </p>
                 {% if page.helper %}
                 <p>
