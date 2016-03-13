@@ -50,6 +50,16 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 -->
+
+
+<div style="width:300px; float:right; margin:0 0 2em 2em; background:#eee; border: 1px solid #bbb;">
+  <a href="https://commons.wikimedia.org/wiki/File:PSM_V36_D810_Normal_class_at_the_free_sloyd_school.jpg">
+  <img src="img/sloyd.png" alt="Sloyd" style="width:100%;">
+  </a>
+  <div style="width:100%;padding:3px">
+  Sløyd-klasse c. 1890. Ill.: Popular Science Monthly 36, s. 790.
+  </div>
+</div>
 <p>
   Bli med på biblioteksløyd for å bedre din digitale kompetanse! Møt andre (litt) nerdete kolleger fra biblioteksektoren for å lære om begreper og dataverktøy som kan gi deg ideer til hvordan arbeidshverdagen din som bibliotekar kan bli morsommere og mer effektiv (men ikke nødvendigvis enklere).
 </p>
@@ -248,7 +258,9 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="deltakerliste">Deltakerliste</h2>
+
+<em>Kommer</em>
 
 <div class="row">
   <!--
@@ -355,6 +367,172 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
   'tools/check' as well.
 -->
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Oppsett</h2>
 
-TODO
+<p>
+  Følgende programvare må installeres på forhånd.
+  Kontakt oss om du har problemer.
+</p>
+
+<h3 id="setup-git">Git og Bash-shell</h3>
+
+ <div class="row">
+    <div class="col-md-4">
+      <h4 id="shell-windows">Windows</h4>
+      <ol>
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
+        <li>Run the installer and follow the steps bellow:
+          <ol>
+            <!-- Git 2.6.1 Setup -->
+            <!-- Welcome to the Git Setup Wizard -->
+            <li>Click on "Next".</li>
+            <!-- Information -->
+            <li>Click on "Next".</li>
+            <!-- Select Destination Location -->
+            <li>Click on "Next".</li>
+            <!-- Select Components -->
+            <li>Click on "Next".</li>
+            <!-- Select Start Menu Folder -->
+            <li>Click on "Next".</li>
+            <!-- Adjusting your PATH environment -->
+            <li>
+              <strong>
+                Select "Use Git from the Windows Command Prompt" and click on "Next".
+              </strong>
+                If you forgot to do this programs that you need for the workshop will not work properly.
+                If this happens rerun the installer and select the appropriate option.
+            </li>
+            <!-- Configuring the line ending conversions -->
+            <li>
+              Click on "Next".
+              <strong>
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected.
+              </strong>
+            </li>
+            <!-- Configuring the terminal emulator to use with Git Bash -->
+            <li>
+              <strong>
+                Select "Use Windows' default console window" and click on "Next".
+              </strong>
+            </li>
+            <!-- Configuring experimental performance tweaks -->
+            <li>Click on "Next".</li>
+            <!-- Installing -->
+            <!-- Completing the Git Setup Wizard -->
+            <li>Click on "Finish".</li>
+          </ol>
+        </li>
+      </ol>
+      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="shell-macosx">Mac OS X</h4>
+      <p>
+        The default shell in all versions of Mac OS X is Bash, so no
+        need to install anything.  You access Bash from the Terminal
+        (found in
+        <code>/Applications/Utilities</code>). You may want to keep
+        Terminal in your dock for this workshop.
+      </p>
+
+        <ul>
+          <li>
+            <strong>For OS X 10.9 and higher</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+
+          </li>
+          <li>
+            Hvis du ikke er redd for Terminalen anbefaler vi <a href="http://brew.sh/">Homebrew</a>.
+            Når du har installert Homebrew kan du kjøre <code>brew install git</code> i Terminal for å installere Git.
+          </li>
+        </ul>
+
+    </div>
+    <div class="col-md-4">
+      <h4 id="shell-linux">Linux</h4>
+      <p>
+        The default shell is usually Bash, but if your
+        machine is set up differently you can run it by opening a
+        terminal and typing <code>bash</code>.  There is no need to
+        install anything.
+      </p>
+    </div>
+</div> <!-- End of 'shell' section. -->
+
+<h3>GitHub Desktop</h3>
+
+<ul>
+  <li>
+    Last ned og kjør installeringsprogrammet for GitHub Desktop fra
+    <a href="https://desktop.github.com/">desktop.github.com</a>
+  </li>
+</ul>
+
+
+<h3 id="setup-openrefine">OpenRefine</h3>
+
+<ul>
+  <li>Last ned og installer OpenRefine 2.6 fra <a href="http://openrefine.org/download.html">openrefine.org</a>. Velg hhv. "Windows kit", "Mac kit" eller "Linux kit".</li>
+</ul>
+
+<h3 id="setup-texteditor">Teksteditoren</h3>
+
+<p>
+  Last ned og installer Sublime Text 3 beta fra <a href="https://www.sublimetext.com/3">www.sublimetext.com/3</a>.
+  <ul>
+    <li>For Windows: velg </li>
+  </ul>
+</p>
+
+      <li>
+        Søk opp og installer <strong>AutoHotkey</strong>??
+      </li>
+
+      Ditto eller ShapeShifter
+
+      * SublimeText portable?
+
+<div class="row">
+  <div class="col-md-6">
+    <h4 id="texteditor-uio">For UiO-folk</h4>
+    <p>
+      Hvis du er tilknyttet UiO kan du bruke Software Center for å installere programvare som finnes der. Maskinen din vil da automatisk motta oppdateringer for programvaren.
+    </p>
+    <ul>
+      <li>
+        Åpne <a href="https://sccm-internet.uio.no/">Software Center</a>
+      </li>
+      <li>
+        Søk opp og installer <strong>Atom</strong>
+      </li>
+      <li>
+        Søk opp og installer <strong>AutoHotkey</strong>??
+      </li>
+      <li>
+        Søk opp og installer <strong>Notepad++</strong> (valgfritt, vi kommer ikke til å bruke Notepad++ noe særlig)
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h4 id="texteditor-uio">For eksterne</h4>
+    <ul>
+      <li>
+        Last ned og installer Atom fra <a href="https://atom.io/">atom.io</a>
+      </li>
+      <li>
+        Last ned og installer Notepad++ fra <a href="https://notepad-plus-plus.org/download/v6.9.html">notepad-plus-plus.org</a> (valgfritt, vi kommer ikke til å bruke Notepad++ noe særlig)
+      </li>
+      <li>
+        Last ned og installer AutoHotkey fra <a href="https://autohotkey.com/">autohotkey.com</a> : Trykk `Download`, så `Installer`.
+      </li>
+
+    </ul>
+  </div>
+</div>
+
