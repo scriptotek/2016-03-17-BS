@@ -1,7 +1,7 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS.
-venue: "Biblioteksløyd : Universitetsbiblioteket i Oslo"
+venue: "Biblioteksløyd beta : Universitetsbiblioteket i Oslo"
 address: "Undervisningsrom UE26, Niels Henrik Abels hus, Moltke Moes vei 35, 0851 Oslo"
 country: "no"
 language: "nb"
@@ -10,7 +10,7 @@ humandate: "17.–18. mars 2016"
 humantime: "9:00–15:30"
 startdate: 2016-03-17
 enddate: 2016-03-18
-instructor: ["Live Rasmussen", "Leon du Toit", "Elin Stangeland", "Live Kvale", "Kyrre T. Låberg", "Ahmed Abdi Mohammed", "Dan Michael O. Heggø"]
+instructor: ["Live Rasmussen", "Leon du Toit", "Elin Stangeland", "Live Kvale", "Kyrre T. Låberg", "Ahmed Abdi Mohammed", "Dan Michael O. Heggø", "Stian Lågstad", "Ivar H. Stangeby"]
 contact: "l.h.kvale@ub.uio.no"
 etherpad: http://pad.software-carpentry.org/2016-03-17-Oslo-BS
 enrollment: https://nettskjema.uio.no/answer/soid.html
@@ -164,7 +164,7 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
 -->
 <p id="registration">
   <strong>Påmelding</strong>:
-  Meld deg på <a href="{{page.enrollment}}">her</a>.
+  <s>Meld deg på <a href="{{page.enrollment}}">her</a></s>.
 </p>
 
 <hr/>
@@ -192,27 +192,35 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
     <h3>17. mars</h3>
     <table class="table table-striped">
       <tr> <td>Arrival</td>  <td><!--<a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a>--></td> </tr>
-      <tr> <td>09:00</td>  <td>Intro til biblioteksløyd (Live, Live, Elin)</td> </tr>
+      <tr> <td>09:00</td>  <td>Intro til biblioteksløyd (Live, Tracy?)</td> </tr>
       <tr> <td>09:30</td>  <td>Software and data curation, version control, Git and GitHub (Leon)</td> </tr>
-      <tr> <td>11:15</td>  <td>Coffee(?) + jargon busting</td> </tr>
-      <tr> <td>12:00</td>  <td>Strekke på beina / lunsj?</td> </tr>
-      <tr> <td>12:45</td>  <td>Navigating and manipulating plain text files (including data formats like xml, json)
+      <tr> <td>10:15</td>  <td>Kaffe</td> </tr>
+      <tr> <td>10:25</td>  <td>Software and data curation, version control, Git and GitHub continued (Leon)</td> </tr>
+      <tr> <td>11:30</td>  <td>Jargon busting (Alle)</td> </tr>
+      <tr> <td>12:00</td>  <td>Strekke på beina / lunsj (Utsikten på Abel)</td> </tr>
+      <tr> <td>12:45</td>  <td>Jargon busting (Alle)</td> </tr>
+      <tr> <td>13:15</td>  <td>Navigating and manipulating plain text files (including data formats like xml, json)
       using Sublime Text (DM)</td> </tr>
-      <tr> <td>13:45</td>  <td>Kaffe(?)</td> </tr>
+      <tr> <td>14:00</td>  <td>Kaffe</td> </tr>
       <tr> <td>14:15</td>  <td>Regular expressions (DM)</td> </tr>
-      <tr> <td>15:15</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>15:30</td>  <td>Slutt</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>18. mars</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>(Over)leve på UiO og med Windows: Kommandolinja, WinSCP, Putty, GitHub Desktop (?)</td> </tr>
-      <tr> <td>10:15</td>  <td>Kaffepause(?)</td> </tr>
-      <tr> <td>10:30</td>  <td>Praktisk oppgave med kloning fra GitHub, redigering, kjøring, osv.</td> </tr>
-      <tr> <td>11:45</td>  <td>Strekke på beina / lunsj?</td> </tr>
-      <tr> <td>12:30</td>  <td>OpenRefine??</td> </tr>
-      <tr> <td>13:45</td>  <td>Wrap-up? Eller litt om XPath og eXist først?</td> </tr>
-      <tr> <td>Dismissal</td>  <td><!--<a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a>--></td> </tr>
+      <tr> <td>09:00</td>  <td>(Over)leve på Windows: Kommandolinja, WinSCP, Putty, GitHub Desktop (DM, Stian)</td> </tr>
+      <tr> <td>10:45</td>  <td>Kaffe</td> </tr>
+      <tr> <td>10:30</td>  <td>Praktisk oppgave med kloning fra GitHub <!-- Husk: samskriving -->, redigering, kjøring, osv. (DM)</td> </tr>
+      <tr> <td>12:00</td>  <td>Strekke på beina / lunsj (Utsikten på Abel)</td> </tr>
+      <tr> <td>12:45</td>  <td>OpenRefine (Ahmed)</td> </tr>
+      <tr> <td>13:45</td>  <td>To bolker:
+        <ul>
+          <li>Oppgavelab</li>
+          <li>Finne frem i XML-filer med XPath/XQuery?</li>
+        </ul>
+      </td> </tr>
+      <tr> <td>15:00</td>  <td>Slutt<!--<a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a>--></td> </tr>
     </table>
   </div>
 </div>
@@ -536,3 +544,4 @@ enrollment: https://nettskjema.uio.no/answer/soid.html
   </div>
 </div>
 
+<!-- Git, GitHub Desktop, Sublime Text, OpenRefine, Putty, WinSCP,  -->
