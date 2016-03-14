@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tekstredigering - biblioteksløyd 2016-03-17</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Tekstredigering
+Biblioteksløyd 2016-03-17
+
+.footnote[Slides: https://scriptotek.github.io/2016-03-17-BS/slides/1.2-text.html]
+
+<!--
+
+# Agenda
+
+1. Introductions
+2. Deep-dive
+3. ...
+-->
+
+---
+
+# Lett tastaturgym som oppvarming
+
+- Tastaturet gjør deg mer effektiv, bruk det der du kan
+  (dvs. de fleste steder bortsett fra Alma)
+- Generelt:
+    - Starte program: Windows-tasten + begynn å skrive navnet + Enter
+        - (På Mac: Kommando-mellomrom eller last ned Alfred)
+    - Vis skrivebord: `Win-D`, åpne filutforsker: `Win-E`, lukk vindu: `Alt-F4`,
+      bytt mellom programmer: `Alt-Tab`, skrive ut: `Ctrl-P`
+- Redigering:
+    - Klippe ut/kopiere/lime inn tekst: `Ctrl-X`, `Ctrl-C`, `Ctrl-V`
+    - Angre: `Ctrl-Z` (utfør likevel: `Ctrl-Y`)
+    - Lagre: `Ctrl-S`
+
+- Oppgave: Google "keyboard shortcut(s)" + en ting du gjør hver dag
+
+???
+
+- AutoHotkey og multiple clipboards???
+
+- Eksempler: Outlook: Ctrl-N, skrive, tab, tab, skrive, Ctrl+Enter for å sende
+(Gmail: enda bedre..)
+- IE/Firefox: Ctrl-L for å hoppe til URL-feltet
+
+---
+
+# Ren tekst / plain text
+
+* Operasjonell definisjon: Alt som kan åpnes i (Sublime Text / Atom / *fyll inn din favoritteditor her*)
+* *Krever* ikke spesialprogrammer
+* Eksempler på ren tekst-formater:
+  * CSV for regneark (ikke Excel)
+  * Markdown for enkle artikler, dokumentasjon etc. (ikke Word)
+  * LaTeX for vitenskapelige artikler med mye matematiske uttrykk
+  * RIS for bibliografier <!-- Men EndNotes interne format .enl er binært -->
+  * HTML for nettsider
+  * JSON/XML for data. For *store* datasett kan ren tekst-formater være ineffektive å jobbe med.
+  * Kode
+  * osv…
+
+---
+
+# Eksempler
+
+- TODO: Vise et enkelt strukturert datasett i hhv. JSON, XML, CSV.. og MARC?
+
+
+---
+class: center header-left
+
+# Ren tekst / plain text
+
+
+|                  | Lite egnet | Egnet | Meget godt egnet |
+|------------------|------------|-------|------------------|
+| Utveksling       |            |       | ⬤               |
+| Versjonskontroll |            |       | ⬤               |
+| *Store* datasett | ⬤         |       |                  |
+| Steking/baking   | ?          | ?     | ?                |
+
+???
+
+* Utmerket for utveksling
+* Utmerket for versjonskontroll (hvorfor?) <!-- bl.a. fordi de ikke krever spesialprogrammer -->
+
+---
+class: center header-left
+
+# Tekstredigeringsprogram
+
+![Learning curves](assets/editor-learning-curve.png "Learning curves")
+
+???
+
+Både Vim og Emacs har røtter tilbake til midten av 70-tallet.
+Fremdeles populære. Svært konfigurerbare og utbyggbare, men man bruker også mye tid på å konfigurere dem...
+
+---
+
+# Tekstredigeringsprogram
+
+* Det finnes en drøss: https://en.wikipedia.org/wiki/List_of_text_editors
+* Sublime Text og Atom er to gode programmer som ligner mye på hverandre.
+  * Begge er enkle å komme i gang med, men kan i stor grad utvides og tilpasses etterhvert som man lærer.
+  * Hvilken skal man velge? Ikke godt å si, prøv begge.
+
+---
+
+# Vi finner noen tekstfiler…
+
+1. HTML fra Vortex??
+2. Klone et repo med GitHub Desktop?
+
+---
+
+# Sublime Text
+
+Punkter som bør dekkes:
+
+- Åpne og hoppe mellom filer
+  - Vise filtype-menyen. Sublime prøver å gjette filtype, men man kan overstyre
+
+- Syntaksfremheving / Syntax highlighting
+
+- Goto anything
+ - cycle left/right between tabs
+
+- Grunnleggende redigering
+    - uppercase/lowercase/sortering av linjer/duplisering
+    - klippe ut hele linja med ctrl-x uten å markere, ctrl-l for å velge linje
+    - velge ord med shift/ctrl + piltaster
+    - flytte linjer opp og ned
+    - hoppe til begynnelsen/slutten av linja
+    - kommentere html
+    - hoppe til matchende parentes med ctrl-m
+    - indentere
+    - autofullføring i html.
+
+  - distraction free mode, ⌃ + ⇧ + ⌘ + F
+
+   - søk og erstatt
+
+     Ref: http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html
+
+- Flere innsettingspunkt (multiple carets)
+
+- Pakkeinstallasjon
+
+  LineEndings
+  SideBarEnhancements
+  Emmet
+
+- Hopping mellom åpnings- og sluttagger i HTMl
+
+- Stavekontroll
+
+- Vintage mode..
+
+- XML-folding (bytte til Atom)
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script src="assets/config_16_9.js"></script></script>
+  </body>
+</html>
