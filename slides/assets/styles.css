@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
 body {
-  font-family: 'Droid Serif';
+  font-family: 'Droid Serif', Arial, sans-serif;
 }
 h1, h2, h3 {
   font-family: 'Yanone Kaffeesatz';
