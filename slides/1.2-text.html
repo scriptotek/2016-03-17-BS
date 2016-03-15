@@ -15,69 +15,60 @@ Biblioteksløyd 2016-03-17
 
 .footnote[Slides: https://scriptotek.github.io/2016-03-17-BS/slides/1.2-text.html]
 
-<!--
+---
 
-# Agenda
+# Lett tastaturgym som oppvarming
 
-1. Introductions
-2. Deep-dive
-3. ...
--->
+- Tastaturet gjør deg mer effektiv, bruk det der du kan<br>
+  <small>(dvs. de fleste steder bortsett fra Alma)</small>
+
+- Bruk søk for å starte programmer eller åpne dokumenter:
+  - Windows: Windows-tasten + begynn å skrive navnet + Enter
+  - Mac: Kommando-mellomrom (eller last ned Alfred)
+
+- (Ja, la oss åpne Sublime Text)
 
 ---
 
 # Lett tastaturgym som oppvarming
 
-- Tastaturet gjør deg mer effektiv, bruk det der du kan
-  (dvs. de fleste steder bortsett fra Alma)
-- Generelt:
-    - Starte program: Windows-tasten + begynn å skrive navnet + Enter
-        - (På Mac: Kommando-mellomrom eller last ned Alfred)
-    - Vis skrivebord: `Win-D`, åpne filutforsker: `Win-E`, lukk vindu: `Alt-F4`,
+- Vis skrivebord: `Win-D`, åpne filutforsker: `Win-E`, lukk vindu: `Alt-F4`,
       bytt mellom programmer: `Alt-Tab`, skrive ut: `Ctrl-P`
 - Redigering:
     - Klippe ut/kopiere/lime inn tekst: `Ctrl-X`, `Ctrl-C`, `Ctrl-V`
     - Angre: `Ctrl-Z` (utfør likevel: `Ctrl-Y`)
     - Lagre: `Ctrl-S`
 
-- Oppgave: Google "keyboard shortcut(s)" + en ting du gjør hver dag
-
-???
-
-- AutoHotkey og multiple clipboards???
-
-- Eksempler: Outlook: Ctrl-N, skrive, tab, tab, skrive, Ctrl+Enter for å sende
-(Gmail: enda bedre..)
-- IE/Firefox: Ctrl-L for å hoppe til URL-feltet
+- Eksempel: Sende en epost med Outlook: `Ctrl-N`, mottaker…, `Tab` x 3, emne..., `Tab`, tekst, ... `Ctrl+Enter`.
 
 ---
 
 # Ren tekst / plain text
 
-* Operasjonell definisjon: Alt som kan åpnes i (Sublime Text / Atom / *fyll inn din favoritteditor her*)
-* *Krever* ikke spesialprogrammer
-* Eksempler på ren tekst-formater:
-  * CSV for regneark (ikke Excel)
-  * Markdown for enkle artikler, dokumentasjon etc. (ikke Word)
-  * LaTeX for vitenskapelige artikler med mye matematiske uttrykk
-  * RIS for bibliografier <!-- Men EndNotes interne format .enl er binært -->
-  * HTML for nettsider
-  * JSON/XML for data. For *store* datasett kan ren tekst-formater være ineffektive å jobbe med.
-  * Kode
-  * osv…
+* Operasjonell definisjon:
+  * Alt som kan leses i Sublime Text / Atom / *fyll inn din favoritteditor her*
+  * *Krever* ikke spesialprogrammer
 
 ---
-
-# Eksempler
-
-- TODO: Vise et enkelt strukturert datasett i hhv. JSON, XML, CSV.. og MARC?
-
-
----
-class: center header-left
 
 # Ren tekst / plain text
 
+Eksempler på filformater:
+
+* Data:
+    * CSV for tabelldata (ála Excel)
+    * RIS for bibliografier <!-- Men EndNotes interne format .enl er binært -->
+    * JSON / XML for generelle data.
+    * MARC(?)
+* Dokumenter:
+    * Markdown for ‘enkle’ artikler, dokumentasjon etc. (ála Word)
+    * LaTeX for vitenskapelige artikler med mye matematiske uttrykk
+    * HTML for nettsider
+* Kode / kildekode
+
+---
+
+# Ren tekst / plain text
 
 |                  | Lite egnet | Egnet | Meget godt egnet |
 |------------------|------------|-------|------------------|
@@ -90,6 +81,62 @@ class: center header-left
 
 * Utmerket for utveksling
 * Utmerket for versjonskontroll (hvorfor?) <!-- bl.a. fordi de ikke krever spesialprogrammer -->
+
+---
+
+# Tegnsett/-koding
+
+<div style="float:right; width:50%; margin-left:20px; border:1px solid #888; ">
+  <img src="assets/UnicodeGrow2b.png" alt="Unicode growth" style="width:100%;">
+  <div style="padding: 6px; background:white; font-size: 60%;">
+    Ill.: User:Krauss on
+    <a href="https://commons.wikimedia.org/wiki/File:UnicodeGrow2b.png">Wikimedia Commons</a>.
+    I mars 2016 brukes UTF-8 på > 85 % av alle nettsider.
+  </div>
+</div>
+
+
+- Tekstfiler er alltid lagret med et bestemt tegnsett.
+- Som regel trenger du ikke forholde deg til det, men kommer du i situasjoner der du må velge: velg UTF-8.<br>
+  <small>(I UTF-8 opptar hvert tegn 1-4 byte (8 bit) avhengig av hvilke tegn det er: a-z opptar f.eks. 1 byte, mens æøå opptar 2 byte hver).</small>
+
+???
+
+Med tekstfiler mener jeg "ren tekst-filer"
+
+---
+
+# Tegnsett/-koding
+
+- Sublime Text lagrer (i likhet med de fleste andre programmer i dag) UTF-8 som standard.
+- Oppgave: Lag en ny tekstfil som inneholder æøå, lagre, velg "reopen with encoding"
+  og velg et feil tegnsett, dvs. hva som helst annet enn UTF-8.
+  Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
+  - Som her: http://turl.no/14hu
+
+---
+
+# Tegnsett/-koding
+
+- Spørsmål: Hvordan ser jeg hvilket tegnsett en fil har i Sublime Text?
+  - Kunsten å google: http://lmgtfy.com/?q=sublime+text+show+encoding
+
+???
+
+Her kommer vi faktisk innom JSON allerede!
+Svar nummer 2..
+
+---
+
+# Tegnsett/-koding
+
+- Spørsmål: Hvordan ser jeg hvilket tegnsett en fil har i Sublime Text?
+  - Kunsten å google: http://lmgtfy.com/?q=sublime+text+show+encoding
+  - Spørsmål: Hvilket format er konfigurasjonsfilen?
+
+???
+
+Mens vi er her kan vi også sette font-size opp til 12px.
 
 ---
 class: center header-left
@@ -112,9 +159,106 @@ Fremdeles populære. Svært konfigurerbare og utbyggbare, men man bruker også m
   * Begge er enkle å komme i gang med, men kan i stor grad utvides og tilpasses etterhvert som man lærer.
   * Hvilken skal man velge? Ikke godt å si, prøv begge.
 
+
 ---
 
-# Vi finner noen tekstfiler…
+# Oppgave: Utforske et API
+
+  - Du har nettopp oppdaget Worldcat xISBN – et API for å slå opp ISBN-numre og hente ut
+    andre utgaver av samme verk + grunnleggende metadata. Du finner dokumentasjonen for API-et
+    på http://xisbn.worldcat.org/xisbnadmin/doc/api.htm
+  - Prøv det første eksempelet: "to request all editions of 0596002815 [Learning Python]"
+  - Prøv å slå opp en annen bok, f.eks. 9781430218333
+      - Hvis vi skulle brukt API-et i et script ville vi latt isbn-nummeret være en *variabel*.
+        Verdien kunne vi hentet fra f.eks. et tekstfelt der brukeren fyller det inn
+        (slik jeg gjør på https://labs.biblionaut.net/lille_hjelper/)
+        Eller vi kunne f.eks. hatt en liste med isbn-numre som vi lot scriptet slå opp, én for én.
+  - Kopier responsdokumentet (teksten altså) over i et nytt dokument i Sublime Text.
+  - Legg merke til at Sublime skjønner at dette er XML (menyen nederst til høyre).
+  - Bruk "auto indent" (hint: `ctrl-shift-p`)for å gjøre teksten lettere å lese.
+  - Kan du tenke deg en annen måte å strukturere disse dataene på i XML?
+    F.eks. helt uten bruk av attributter? Prøv å omstrukturere dokumentet.
+  - Gå tilbake til nettleseren og prøv å endre `format=xml` til `format=json` i URL-en.
+  - Kopier teksten over i Sublime Text igjen og bruk "auto indent".
+
+<!--
+# Ren tekst / plain text
+
+## En enkel bibliografisk MARC-post
+
+<pre>
+001 993710000000291228
+020    $a 1-4842-0076-4
+020    $a 1-4842-0077-2
+040    $a AU-PeEL $b eng $c AU-PeEL $d AU-PeEL
+100 1  $a Chacon, Scott.
+245 10 $a Pro Git $h [electronic resource].
+246    $a The expert's voice
+250    $a 2nd ed.
+260    $a Berkeley : $b Apress, $c 2014.
+</pre>
+
+# Ren tekst / plain text
+
+## … i CSV?
+
+MARC-poster er vriene å konvertere til tabeller. Hvorfor?
+Repeterende felt. Flerdimensjonale.
+
+```csv
+001,020,150
+ost,kake,,s,
+
+```
+
+(merk: JSON-syntaksen definerer)
+
+```json
+{
+    "001": "993710000000291228",
+    "020": {
+        "a": "1-4842-0076-4",
+        "a": "1-4842-0077-2"
+    },
+    "author": "Chacon, Scott.",
+    "title": "Pro Git",
+    "???": "The expert's voice",
+    "edition": "2nd ed.",
+    "publisher": "Apress, ",
+}
+```
+
+```json
+{
+    "id": "993710000000291228",
+    "isbn": [
+        "1-4842-0076-4",
+        "1-4842-0077-2"
+    ],
+    "author": "Chacon, Scott.",
+    "title": "Pro Git",
+    "???": "The expert's voice",
+    "edition": "2nd ed.",
+    "publisher": "Apress, ",
+    ""
+}
+```
+
+
+- TODO: Vise et enkelt strukturert datasett i hhv. JSON, XML, CSV.. og MARC?
+
+- Syntaks er ikke viktig... de samme dataene kan kodes på mange måter
+- Syntaks er viktig... leser man ikke syntaksen leser man ikke dataene.. Syntaksfremheving hjelper
+- Indentering og luft. Gjør fila mye lettere å lese, script bryr seg ikke. Fila tar større plass, men det bryr vi oss *vanligvis* ikke om.
+
+class: center header-left
+
+-->
+
+
+---
+
+# Vi ser på flere tekstfiler
 
 1. HTML fra Vortex??
 2. Klone et repo med GitHub Desktop?
@@ -166,6 +310,10 @@ Punkter som bør dekkes:
 
 - XML-folding (bytte til Atom)
 
+
+# Oppgaver
+
+Gjør om komma-separert liste med epostadresser til tabell?
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
