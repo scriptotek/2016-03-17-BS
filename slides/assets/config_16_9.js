@@ -5,6 +5,9 @@ var slideshow = remark.create({
   // Alternatives: '16:9', ...
   ratio: '16:9',
 
+  highlightStyle: 'monokai',
+  highlightLines: true,
+
   // Navigation options
   navigation: {
     // Enable or disable navigating using scroll
