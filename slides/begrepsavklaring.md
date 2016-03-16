@@ -2,7 +2,6 @@
 
 - Når blir tekst kode?
 - Når blir kode programvare?
-
 - Er Google til hjelp?
 
 **Plan for sesjon**
