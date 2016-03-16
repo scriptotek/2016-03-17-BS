@@ -33,34 +33,33 @@ Biblioteksløyd 2016-03-17
 # Lett tastaturgym som oppvarming
 
 - Vis skrivebord: `Win-D`, åpne filutforsker: `Win-E`, lukk vindu: `Alt-F4`,
-      bytt mellom programmer: `Alt-Tab`, skrive ut: `Ctrl-P`
+      bytt mellom programmer: `Alt-Tab`, skrive ut: `Ctrl + P`
 - Redigering:
-    - Klippe ut/kopiere/lime inn tekst: `Ctrl-X`, `Ctrl-C`, `Ctrl-V`
-    - Angre: `Ctrl-Z` (utfør likevel: `Ctrl-Y`)
-    - Lagre: `Ctrl-S`
+    - Klippe ut/kopiere/lime inn tekst: `Ctrl + X`, `Ctrl + C`, `Ctrl + V`
+    - Angre: `Ctrl + Z` (utfør likevel: `Ctrl + Y`)
+    - Lagre: `Ctrl + S`
 
-- Eksempel: Sende en epost med Outlook: `Ctrl-N`, mottaker…, `Tab` x 3, emne..., `Tab`, tekst, ... `Ctrl+Enter`.
+- Eksempel: Sende en epost med Outlook: `Ctrl + N`, mottaker…, `Tab` x 3, emne..., `Tab`, tekst, ... `Ctrl+Enter`.
 
 ---
 
 # Ren tekst / plain text
 
-Operasjonell definisjon:
+- Operasjonell definisjon:
+  - Alt som kan leses i Notepad / Sublime Text / Atom / *din favoritteditor*.
 
-- Alt som kan leses i Notepad / Sublime Text / Atom / *din favoritteditor*.
 - *Krever* med andre ord ikke spesialprogrammer for å jobbe med.
+  - Låser deg dermed ikke til ett bestemt program (lock in)
+
+- 30 år gamle tekstfiler lar seg lese i dag, og filene du lager i dag lar
+  seg sannsynligvis lese om 30 år.<br>
+  <span style="font-size:80%">
+  (gitt at maskinene ikke har funnet ut at det er en veldig dårlig idé å la rotete mennesker dille med ting som har med dem å gjøre)
+  </span>
 
 ---
 
-# Ren tekst er din venn
-
-- Låser deg ikke til ett bestemt program (lock in)
-
-- Du kan åpne 30 år gamle tekstfiler i dag,
-  og du kan åpne filene du lager i dag om 30 år.<br>
-  <span style="font-size:80%">
-  (gitt at du fremdeles lever, er et fritt menneske, ikke lever i en postapokalyptisk verden, osv.)
-  </span>
+# Ren tekst / plain text
 
 |                  | Lite egnet | Egnet | Meget godt egnet |
 |------------------|------------|-------|------------------|
@@ -80,12 +79,17 @@ Operasjonell definisjon:
 
 Hvordan «ren»? *Ren tekst* er ikke *formatert tekst*.
   - Men med *markeringsspråk* som f.eks. HTML og Markdown
-    kan du *markere* formatering ved hjelp av språkets *syntaks*. Eksempel:
+    kan du fremdeles *markere* tekst som skal formateres ved hjelp av språkets *syntaks*. Eksempel:
 
 |                | HTML                                                             | Markdown                       |
 |----------------|------------------------------------------------------------------|--------------------------------|
 | *Vektlagt tekst*<br><small>(emphasized / kursiv)</small>  | `<em>Kursiv tekst</em>`<br><small>(i gamle dager: `<i>Kursiv tekst</i>`)</small> | `**Kursiv tekst**`                |
 | **Sterkt vektlagt tekst**<br><small>(strongly emphasized / fet)</small> | `<strong>Fet tekst</strong>`<br><small>(i gamle dager: `<b>Fet tekst</b>`)</small> | `**Fet tekst**`                |
+
+???
+
+Markdown er mye enklere enn HTML. Det gjør at det går raksere å skrive,
+og de begrensede formateringsmulighetene gjør også at man kan bruke mer tid på å faktisk skrive tekst enn å lure på hvordan man skal formatere den.
 
 ---
 
@@ -107,7 +111,7 @@ Eksempler på filformater:
 
 ---
 
-# Tegnsett/-koding
+# Tegnsett/-koding: Bruk UTF-8
 
 <div style="float:right; width:50%; margin-left:20px; border:1px solid #888; ">
   <img src="assets/UnicodeGrow2b.png" alt="Unicode growth" style="width:100%;">
@@ -123,6 +127,8 @@ Eksempler på filformater:
 - Som regel trenger du ikke forholde deg til det, men kommer du i situasjoner der du må velge: velg UTF-8.<br>
   <small>(I UTF-8 opptar hvert tegn 1-4 byte (8 bit) avhengig av hvilke tegn det er: a-z opptar f.eks. 1 byte, mens æøå opptar 2 byte hver).</small>
 
+- Sublime Text lagrer (i likhet med de fleste andre programmer i dag) UTF-8 som standard.
+
 ???
 
 Med tekstfiler mener jeg "ren tekst-filer"
@@ -132,44 +138,48 @@ Med tekstfiler mener jeg "ren tekst-filer"
 # Tegnsett/-koding
 
 - Sublime Text lagrer (i likhet med de fleste andre programmer i dag) UTF-8 som standard.
-- Oppgave: Lag en ny tekstfil som inneholder æøå, lagre, velg "reopen with encoding"
-  og velg et feil tegnsett, dvs. hva som helst annet enn UTF-8.
-  Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
+- Oppgave: 
+  - Lag en ny fil (`Ctrl + N`) som inneholder æøå og lagre den et sted (`Ctrl + S`).
+  - Velg "reopen with encoding" fra File-menyen og velg et *feil* tegnsett, dvs. hva som helst annet enn UTF-8.
+  - Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
   - Som her: http://turl.no/14hu
 
 ---
 
 # Tegnsett/-koding
 
+- Sublime Text lagrer (i likhet med de fleste andre programmer i dag) UTF-8 som standard.
+- Oppgave: 
+  - Lag en ny fil (`Ctrl + N`) som inneholder æøå og lagre den et sted (`Ctrl + S`).
+  - Velg "reopen with encoding" og velg et *feil* tegnsett, dvs. hva som helst annet enn UTF-8.
+  - Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
+  - Som her: http://turl.no/14hu
 - Spørsmål: Hvordan ser jeg hvilket tegnsett en fil har i Sublime Text?
   - Kunsten å google: http://lmgtfy.com/?q=sublime+text+show+encoding
 
 ???
 
-Her kommer vi faktisk innom JSON allerede!
-Svar nummer 2..
+- Her kommer vi faktisk innom JSON allerede!
+- Svar nummer 2..
+- Mens vi er her kan vi også sette font-size opp til 12px.
 
 ---
 
-# Tegnsett/-koding
+# Linjeskift
 
-- Spørsmål: Hvordan ser jeg hvilket tegnsett en fil har i Sublime Text?
-  - Kunsten å google: http://lmgtfy.com/?q=sublime+text+show+encoding
-  - Spørsmål: Hvilket format er konfigurasjonsfilen?
+<p style="margin-bottom:0;">
+  <em>Have you ever opened a simple little ASCII text file to see it inexplicably displayed as onegiantunbrokenline?</em>
+</p>
+<div style="text-align: right; font-size:80%;">
+(<a href="https://blog.codinghorror.com/the-great-newline-schism/">https://blog.codinghorror.com/the-great-newline-schism/</a>)
+</div>
 
-???
+- Linjeskift kodes på ulike måter på Windows (`CRLF`) og Linux/Mac (`LF`). I riktig gamle dager hadde Mac en tredje variant (`CR`).
+- Notepad skjønner kun `CRLF`, ikke `LF`, mens mer avanserte teksteditorer som Notepad++, Sublime Text, osv.. skjønner begge deler.
 
-Mens vi er her kan vi også sette font-size opp til 12px.
-
----
-
-# Linjeendelser
-
-* CRLF (Windows)
-* LF (Linux/Mac).
-
-Programmer som Sublime Text klarer å skjønne begge deler, mens Notepad ikke gjør det (vise eksempel).
-Vanligvis trenger du derfor ikke tenke på dette, men verdt å vite om at dette kan skape problemer i noen sammenhenger. F.eks. for versjonskontroll.. Husker du fra installasjonen av Git..?
+- Derfor er det stort sett ikke et problem… inntil du f.eks. skal jobbe med versjonskontrollerte filer med noen som bruker et annet system.
+  - Da du installerte Git valgte du forhåpentligvis *Keep "Checkout Windows-style, commit Unix-style line endings" selected*.
+  - Se også https://help.github.com/articles/dealing-with-line-endings/
 
 ---
 class: center header-left
@@ -191,9 +201,10 @@ Fremdeles populære. Svært konfigurerbare og utbyggbare, men man bruker også m
 * Sublime Text og Atom er to gode programmer som ligner mye på hverandre.
   * Begge er enkle å komme i gang med, men kan i stor grad utvides og tilpasses etterhvert som man lærer.
   * Hvilken skal man velge? Ikke godt å si, prøv begge.
-
+  * Liker du ingen av dem? Prøv f.eks. Notepad++ på Windows eller BBEdit på Mac.
 
 ---
+class: smalltext
 
 # Oppgave: Utforske et API
 
@@ -208,17 +219,16 @@ Fremdeles populære. Svært konfigurerbare og utbyggbare, men man bruker også m
         Eller vi kunne f.eks. hatt en liste med isbn-numre som vi lot scriptet slå opp, én for én.
   - Kopier responsdokumentet (teksten altså) over i et nytt dokument i Sublime Text.
   - Legg merke til at Sublime skjønner at dette er XML (menyen nederst til høyre).
-  - Bruk "auto indent" (hint: `ctrl-shift-p`)for å gjøre teksten lettere å lese.
+  - Bruk "auto indent" (hint: `ctrl + shift-p`)for å gjøre teksten lettere å lese.
   - Kan du tenke deg en annen måte å strukturere disse dataene på i XML?
     F.eks. helt uten bruk av attributter? Prøv å omstrukturere dokumentet.
   - Gå tilbake til nettleseren og prøv å endre `format=xml` til `format=json` i URL-en.
   - Kopier teksten over i Sublime Text igjen og bruk "auto indent".
 
+<!--
 
 # Oppgave: Jobbe med Markdown i Atom
 
-
-<!--
 # Ren tekst / plain text
 
 ## En enkel bibliografisk MARC-post
@@ -281,7 +291,6 @@ ost,kake,,s,
 }
 ```
 
-
 - TODO: Vise et enkelt strukturert datasett i hhv. JSON, XML, CSV.. og MARC?
 
 - Syntaks er ikke viktig... de samme dataene kan kodes på mange måter
@@ -290,10 +299,6 @@ ost,kake,,s,
 
 class: center header-left
 
--->
-
-
----
 
 # Vi ser på flere tekstfiler
 
@@ -301,59 +306,109 @@ class: center header-left
 2. Klone et repo med GitHub Desktop?
 3. http://data.stortinget.no/eksport
 
+-->
+
+
 ---
 
 # Sublime Text
 
-Punkter som bør dekkes:
+- Vi har sett:
+  - at programmet prøver å gjette hvilket filformat/språk dokumentet har
+    (menyen nederst til høyre).
+  - at programmet kjenner igjen og fargelegger syntakselementer for språket
+    du har valgt. Dette kalles *syntaksfremheving* (*syntax highlighting*).
 
-- Åpne og hoppe mellom filer
-  - Vise filtype-menyen. Sublime prøver å gjette filtype, men man kan overstyre
+---
 
-- Syntaksfremheving / Syntax highlighting
+# Oppgave
 
-- Goto anything
- - cycle left/right between tabs
+<img src="assets/clone1.png" alt="Clone with Desktop" style="float:right;">
 
-- Grunnleggende redigering
-    - uppercase/lowercase/sortering av linjer/duplisering
-    - klippe ut hele linja med ctrl-x uten å markere, ctrl-l for å velge linje
-    - velge ord med shift/ctrl + piltaster
-    - flytte linjer opp og ned
-    - hoppe til begynnelsen/slutten av linja
-    - kommentere html
-    - hoppe til matchende parentes med ctrl-m
-    - indentere
-    - autofullføring i html.
+1. Åpne https://github.com/scriptotek/2016-03-17-BS-samples
+   og klon repoet til din maskin med GitHub Desktop -->
+2. Fra GitHub Desktop: Velg "Open in Explorer"
+3. Dra mappen over i Sublime Text. Den blir da lagt til under "Folders"
+   i venstremargen.
+4. Åpne filen `ic2810.wiki`, men uten å bruke musen!
+   Trykk `Ctrl + P` for å åpne "Open anything", der du kan fuzzy-søke etter
+   filer i alle åpne mapper og undermapper.
+5. Hva slags markeringsspråk er dette, mon tro? *Forstår* Sublime Text det?
 
-  - distraction free mode, ⌃ + ⇧ + ⌘ + F
+---
 
-   - søk og erstatt
+# Package Control
 
-     Ref: http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html
+- En stor fordel med teksteditorer som Sublime Text og Atom er at de er
+  utbyggbare. For å komme i gang må du sette opp Package Control:
 
+  - Åpne https://packagecontrol.io/installation i nettleseren din,
+    dobbeltklikk på teksten under "Sublime Text 3" for å velge hele kodesnutten,
+    `Ctrl + C`
+  - Gå tilbake til Sublime, velg `View > Show Console`,
+    lim inn teksten og trykk `Enter`. Wow! Du har akkurat kjørt et Python-script
+    inni Sublime Text!
+
+- `Ctrl + Shift-P` åpner kommandopaletten. Her får du tilgang til de aller
+  fleste meny-elementene og mer til uten å måtte bruke musa.
+  - Skriv "install". "Packgage control: install package" markeres. Trykk `Enter`
+    og vent mens Sublime henter en oppdatert liste over pakker
+  - Skriv "mediawiki" og Enter
+  - `Ctrl + Shift-P` og skriv f.eks. "syntax med". "Set Syntax: MediaWiki" markeres. Trykk `Enter`.
+
+---
+
+# Package Control
+
+- Mens vi er igang: La oss installere `GitGutter` også.
+- Prøv å redigere wiki-filen du har åpen og se hva som skjer.
+
+---
+
+# Oppgave
+
+1. `Ctrl + P` og åpne `sample.csv`
+2. Vi vil innkapsle alle navnene i anførselstegn:
+   - Velg et komma, velg alle (`Alt + F3` på win), `Alt + →`, `Shift + Alt + →` 3 ganger, `"`.
+3. Vi kan nå endre fra tab til komma som skilletegn
+4. Bruk package control for å installere `Adanced CSV`
+  (Dokumentasjon på https://github.com/wadetb/Sublime-Text-Advanced-CSV)
+5. Slette en kolonne
+6. Sortere, osv.
+7. Endre datoformatet for alle radene til YYYY-MM-DD
+
+---
+
+# Andre ting du kan prøve
+
+- Fra kommandopaletten (`Ctrl + Shift + P`):
+   - word-wrap: Skru av og på linjebrytning
+   - uppercase/lowercase/sort
+- Trykk `Ctrl + X` uten å velge tekst for å klippe ut hele linja du er på
+- `Ctrl + L` for å velge hele linja du er på, `Ctrl + Shift + ↑` for å flytte linja opp.
+- Hopp fra ord til ord med piltastene (venstre/høyre) mens du holder inne `Alt`. Holder du inne `Shift` også velger du ord.
+- Hopp fra fane til fane med `Ctrl` + høyre/venstre
+
+Prøv noen av hurtigtastene på http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html
+
+<!--
+
+- kommentere html
+- hoppe til matchende parentes med ctrl + m
+- indentere
+- autofullføring i html.
+- distraction free mode, ⌃ + ⇧ + ⌘ + F
+- søk og erstatt
 - Flere innsettingspunkt (multiple carets)
-
-- Pakkeinstallasjon
-
-  LineEndings
-  SideBarEnhancements
-  Emmet
-
 - Hopping mellom åpnings- og sluttagger i HTMl
-
-- Wordwrap
-
 - Stavekontroll
-
 - Vintage mode..
-
 - XML-folding (bytte til Atom)
-
 
 # Oppgaver
 
-Gjør om komma-separert liste med epostadresser til tabell?
+Vintage mode: Gjør om komma-separert liste med epostadresser til tabell?
+-->
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>

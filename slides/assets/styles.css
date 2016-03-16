@@ -10,7 +10,7 @@ h1, h2, h3 {
   font-weight: 400;
   margin-bottom: 0;
 }
-.remark-slide-content h1 { font-size: 3em; }
+.remark-slide-content h1 { font-size: 3em; margin-top: 20px; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }
 .footnote {
@@ -133,4 +133,7 @@ li {
 }
 .header-left h1 {
   text-align: left;
+}
+.smalltext ul {
+  font-size: 85%;
 }
