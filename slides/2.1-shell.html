@@ -10,10 +10,142 @@
 
 class: center, middle, inverse
 
-# Shell, etc.
+# Kommandolinja, WinSCP og Putty
 Biblioteksløyd 2016-03-18
 
 .footnote[Slides: https://scriptotek.github.io/2016-03-17-BS/slides/2.1-shell.html]
+
+???
+
+du kan skrive slide notes her
+
+---
+
+# Hva vi skal lære
+
+1. Enkel bruk av kommandolinjeverktøy
+
+---
+
+# Hva vi skal lære
+
+1. Enkel bruk av kommandolinjeverktøy
+1. Bruk av WinSCP for å kopiere filer til/fra andre maskiner
+
+---
+
+# Hva vi skal lære
+
+1. Enkel bruk av kommandolinjeverktøy
+1. Bruk av WinSCP for å kopiere filer til/fra andre maskiner
+1. Bruk av Putty for å kopiere filer til/fra andre maskiner
+
+---
+
+# Hva _er_ kommandolinja?
+ 
+---
+
+# Hva _er_ kommandolinja?
+
+_"The command line is the ultimate seat of power on your computer."_
+ 
+---
+
+# Hva _er_ kommandolinja?
+
+_"The command line is the ultimate seat of power on your computer."_
+
+Nesten alt du kan gjøre ved å klikke deg rundt på en data kan du gjøre ved å gi den skriftlige kommandoer.
+ 
+---
+
+# Hva _er_ kommandolinja?
+
+_"The command line is the ultimate seat of power on your computer."_
+
+Nesten alt du kan gjøre ved å klikke deg rundt på en data kan du gjøre ved å gi den skriftlige kommandoer.
+
+Eksempler:
+
+* Åpne et program
+* Laste ned et program
+* Kopiere filer fra en ekstern maskin
+
+---
+
+# Bash
+
+* Bash er et kommandolinjeverktøy som kommer med de fleste Linux-versjoner, og er kanskje det mest brukte kommandolinjeverktøyet.
+
+* Bash kommer med de fleste Linux-varianter. Det er bash man som oftest bruker når man åpner en terminal i Linux.
+
+* Vi skal bruke Git Bash i våre eksempler. Git Bash er en bash-variant vi kan bruke på Windows.
+
+.footnote[Git Bash kan lastes ned [her](https://git-scm.com/downloads)]
+
+---
+
+# Powershell
+
+* Vi kan tenke på Powershell som Microsoft sin variant av bash.
+
+* PowerShell er installert på de aller fleste Windows-maskiner.
+
+* Mange kommandoer kan man bruke helt likt i Bash og i Powershell. I våre eksempler skal vi bruke begge.
+
+.footnote[PowerShell kan lastes ned [her](https://msdn.microsoft.com/en-us/powershell/mt173057.aspx)]
+
+---
+
+# Eksempel 1: Åpne et program
+
+1. Åpne PowerShell/Git Bash
+1. Skriv `notepad`
+1. Trykk enter
+ 
+---
+
+# Eksempel 2: Se på mapper
+
+1. Åpne PowerShell/Git Bash
+1. Skriv `pwd` for å se _hvor_ du er
+1. Skriv `ls` for å se _hva_ som er der
+ 
+---
+
+# Eksempel 3: Flytte en fil
+
+1. Åpne PowerShell/Git Bash
+1. Skriv `touch testfil.txt` for å lage en tom tekstfil
+1. Skriv `mkdir testmappe` for å lage en mappe
+1. Skriv `ls` for å se hva som er der du befinner deg
+1. For å flytte `testfil.txt` inn i `testmappe` bruker vi kommandoen `cp testfil.txt testmappe/`
+
+`cp source target` - kommandoen for å kopiere noe fra `source` til `target`
+ 
+---
+
+# Oppsummering så langt
+
+Så langt har vi brukt flere ulike kommandoer for å gjøre ting i kommandolinja. La oss ta en oppsummering:
+
+1. `ls`: List. Viser hva som finnes hva du er.
+1. `pwd`: Print Working Directory. Viser hvor du er i mappestrukturen.
+1. `touch`: Lager en tom fil.
+1. `mkdir`: Make directory. Lager en mappe.
+1. `cp`: Copy. Kopierer en fil/mappe fra et sted til et annet.
+
+---
+
+# Vil du lære mer om kommandolinja?
+
+Det finnes mange svært gode onlinekurs som lærer deg å bruke kommandolinja. Her er noen forslag:
+
+* CodeAcademy: Learn the Command Line  
+  https://www.codecademy.com/ru/courses/learn-the-command-line
+* udemy: Linux Command Line Basics  
+  https://www.udemy.com/linux-command-line-volume1/
 
 ---
 
