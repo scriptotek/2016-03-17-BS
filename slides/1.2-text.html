@@ -39,7 +39,7 @@ Biblioteksløyd 2016-03-17
     - Angre: `Ctrl + Z` (utfør likevel: `Ctrl + Y`)
     - Lagre: `Ctrl + S`
 
-- Eksempel: Sende en epost med Outlook: `Ctrl + N`, mottaker…, `Tab` x 3, emne..., `Tab`, tekst, ... `Ctrl+Enter`.
+- Eksempel: Sende en epost med Outlook: `Ctrl + N`, mottaker…, `Tab` x 3, emne..., `Tab`, tekst, ... `Ctrl + Enter`.
 
 ---
 
@@ -141,7 +141,7 @@ Med tekstfiler mener jeg "ren tekst-filer"
 - Oppgave: 
   - Lag en ny fil (`Ctrl + N`) som inneholder æøå og lagre den et sted (`Ctrl + S`).
   - Velg "reopen with encoding" fra File-menyen og velg et *feil* tegnsett, dvs. hva som helst annet enn UTF-8.
-  - Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
+  - Resultatet har et navn: *mojibake* (fra japansk 文字化け) eller *tegnsalat*.
   - Som her: http://turl.no/14hu
 
 ---
@@ -149,10 +149,10 @@ Med tekstfiler mener jeg "ren tekst-filer"
 # Tegnsett/-koding
 
 - Sublime Text lagrer (i likhet med de fleste andre programmer i dag) UTF-8 som standard.
-- Oppgave: 
+- Oppgave:
   - Lag en ny fil (`Ctrl + N`) som inneholder æøå og lagre den et sted (`Ctrl + S`).
-  - Velg "reopen with encoding" og velg et *feil* tegnsett, dvs. hva som helst annet enn UTF-8.
-  - Resultatet blir det vi kaller *mojibake* (fra japansk 文字化け) eller på norsk: *tegnsalat*.
+  - Velg "reopen with encoding" fra File-menyen og velg et *feil* tegnsett, dvs. hva som helst annet enn UTF-8.
+  - Resultatet har et navn: *mojibake* (fra japansk 文字化け) eller *tegnsalat*.
   - Som her: http://turl.no/14hu
 - Spørsmål: Hvordan ser jeg hvilket tegnsett en fil har i Sublime Text?
   - Kunsten å google: http://lmgtfy.com/?q=sublime+text+show+encoding
@@ -204,6 +204,35 @@ Fremdeles populære. Svært konfigurerbare og utbyggbare, men man bruker også m
   * Liker du ingen av dem? Prøv f.eks. Notepad++ på Windows eller BBEdit på Mac.
 
 ---
+
+# Sublime Text Package Control
+
+- En stor fordel med teksteditorer som Sublime Text og Atom er at de er
+  utbyggbare. For å komme i gang i Sublime Text må du først sette opp Package Control:
+
+  - Åpne https://packagecontrol.io/installation i nettleseren din,
+    dobbeltklikk på teksten under "Sublime Text 3" for å velge hele kodesnutten,
+    `Ctrl + C`
+  - Gå tilbake til Sublime, velg `View > Show Console`,
+    lim inn teksten og trykk `Enter`. Wow! Du har akkurat kjørt et Python-script
+    inni Sublime Text!
+
+- (I Atom er pakkehåndtering innebygget, så du slipper dette steget)
+
+---
+
+# Installere en pakke
+
+Vi trenger en pakke til første oppgave.
+
+- `Ctrl + Shift + P` åpner kommandopaletten. Her får du tilgang til de aller
+  fleste meny-elementene og mer til uten å måtte bruke musa.
+  - Skriv "package control" for å liste opp alle kommandoer relatert til Package Control
+  - Skriv "install". "Package control: install package" markeres. Trykk `Enter`
+    og vent mens Sublime henter en oppdatert liste over pakker.
+  - Skriv "indent xml" og Enter.
+
+---
 class: smalltext
 
 # Oppgave: Utforske et API
@@ -219,11 +248,15 @@ class: smalltext
         Eller vi kunne f.eks. hatt en liste med isbn-numre som vi lot scriptet slå opp, én for én.
   - Kopier responsdokumentet (teksten altså) over i et nytt dokument i Sublime Text.
   - Legg merke til at Sublime skjønner at dette er XML (menyen nederst til høyre).
-  - Bruk "auto indent" (hint: `ctrl + shift-p`)for å gjøre teksten lettere å lese.
+  - Bruk "Auto indent" (hint: `Ctrl + Shift + P`) for å gjøre teksten lettere å lese.
   - Kan du tenke deg en annen måte å strukturere disse dataene på i XML?
     F.eks. helt uten bruk av attributter? Prøv å omstrukturere dokumentet.
   - Gå tilbake til nettleseren og prøv å endre `format=xml` til `format=json` i URL-en.
   - Kopier teksten over i Sublime Text igjen og bruk "auto indent".
+
+???
+
+Vise litt redigering?
 
 <!--
 
@@ -337,29 +370,11 @@ class: center header-left
 
 ---
 
-# Package Control
+# Vi trenger flere pakker!
 
-- En stor fordel med teksteditorer som Sublime Text og Atom er at de er
-  utbyggbare. For å komme i gang må du sette opp Package Control:
-
-  - Åpne https://packagecontrol.io/installation i nettleseren din,
-    dobbeltklikk på teksten under "Sublime Text 3" for å velge hele kodesnutten,
-    `Ctrl + C`
-  - Gå tilbake til Sublime, velg `View > Show Console`,
-    lim inn teksten og trykk `Enter`. Wow! Du har akkurat kjørt et Python-script
-    inni Sublime Text!
-
-- `Ctrl + Shift-P` åpner kommandopaletten. Her får du tilgang til de aller
-  fleste meny-elementene og mer til uten å måtte bruke musa.
-  - Skriv "install". "Packgage control: install package" markeres. Trykk `Enter`
-    og vent mens Sublime henter en oppdatert liste over pakker
+- `Ctrl + Shift + P` åpner kommandopaletten.
   - Skriv "mediawiki" og Enter
-  - `Ctrl + Shift-P` og skriv f.eks. "syntax med". "Set Syntax: MediaWiki" markeres. Trykk `Enter`.
-
----
-
-# Package Control
-
+  - `Ctrl + Shift + P` og skriv f.eks. "syntax med". "Set Syntax: MediaWiki" markeres. Trykk `Enter`.
 - Mens vi er igang: La oss installere `GitGutter` også.
 - Prøv å redigere wiki-filen du har åpen og se hva som skjer.
 
@@ -369,13 +384,14 @@ class: center header-left
 
 1. `Ctrl + P` og åpne `sample.csv`
 2. Vi vil innkapsle alle navnene i anførselstegn:
-   - Velg et komma, velg alle (`Alt + F3` på win), `Alt + →`, `Shift + Alt + →` 3 ganger, `"`.
+   - Velg et komma, velg alle (`Alt + F3` på win), `Ctrl + ←`, `Shift + Ctrl + →` 3 ganger, `"`.
 3. Vi kan nå endre fra tab til komma som skilletegn
-4. Bruk package control for å installere `Adanced CSV`
-  (Dokumentasjon på https://github.com/wadetb/Sublime-Text-Advanced-CSV)
-5. Slette en kolonne
-6. Sortere, osv.
-7. Endre datoformatet for alle radene til YYYY-MM-DD
+4. Vi vil slette den første kolonnen. Bruk "column selection" (hold inne Shift mens du trykker ned høyre museknapp og drar over området du vil velge)
+5. Vi vil slette den tredje kolonnen også, men hm, hvordan gjør vi det? Kanskje det finnes en pakke for å jobbe spesielt med CSV-filer? http://lmgtfy.com/?q=sublime+text+csv
+6. Det gjorde det. Bruk package control for å installere `Adanced CSV`
+7. Slette en kolonne
+8. Sortere, osv.
+9. Endre datoformatet for alle radene til YYYY-MM-DD
 
 ---
 
