@@ -166,7 +166,121 @@ WinSCP, eller Windows Secure Copy, er et gratis open-source program som lar deg 
 Dan Michael sin server, [www.biblionaut.net](http://www.biblionaut.net/), har en mappe vi skal koble oss til.
 
 1. Åpne WinSCP
-1. 
+1. Skriv inn login info for biblionaut:  
+    File protocol: SFTP  
+    Host name: biblionaut.net  
+    Port number: 22987  
+    User name: bibsloyd  
+    Password: h#velbenk8
+1. Login
+
+---
+
+<div style="width:100%;">
+  <img src="assets/winscp.png" alt="Unicode growth" style="width:100%;">
+</div>
+
+---
+
+# Eksempel: Koble til ekstern maskin
+
+<div style="margin-top: 20px;">
+  <div style="float:left; border: 1px solid black; width: 49%;">
+    <strong>Venstre</strong>:<br>
+    Din egen maskin
+  </div>
+  <div style="float:right; border: 1px solid black; width: 49%;">
+  <strong>Høyre</strong>:<br>  
+    Ekstern maskin
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+Vi kan nå bruke mappene på serveren (til høyre) som om de var på vår egen maskin.
+
+Dra filen `testfil.txt` over til din egen maskin for å kopiere den.
+
+---
+
+# Eksempel: Koble til ekstern maskin
+
+<div style="margin-top: 20px;">
+  <div style="float:left; border: 1px solid black; width: 49%;">
+    <strong>Venstre</strong>:<br>
+    Din egen maskin
+  </div>
+  <div style="float:right; border: 1px solid black; width: 49%;">
+  <strong>Høyre</strong>:<br>  
+    Ekstern maskin
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+Vi kan nå bruke mappene på serveren (til høyre) som om de var på vår egen maskin.
+
+Dra filen `testfil.txt` over til din egen maskin for å kopiere den.
+
+That's it! Enkelt og greit - akkurat som å bruke en mappe på din egen maskin.
+
+---
+
+# Putty
+
+* Putty er en SSH-klient for Windows.
+* SSH, eller Secure Shell, er en nettverksprotokoll som lar deg bruke kommandolinja på en annen maskin.
+
+Vi har tidligere:
+- brukt kommandolinja for å administrere filer på egen maskin
+- brukt WinSCP for å administrere filer på en ekstern maskin.
+
+Nå skal vi bruke kommandolinja for å administrere filer på en ekstern maskin, ved hjelp av Putty.
+
+.footnote[Putty kan lastes ned [her](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)]
+
+---
+
+# Eksempel: Koble til ekstern maskin
+
+1. Åpne Putty
+1. Skriv inn server info for biblionaut:  
+    Host name: biblionaut.net  
+    Port number: 22987
+1. Skriv inn brukernavn: `bibsloyd` og trykk enter
+1. Skriv inn passord: `h#velbenk8` og trykk enter
+
+Vi er nå kobla på!
+
+---
+
+# Eksempel: Administrere filer
+
+Nå som vi er kobla inn på kommandolinja på serveren, kan vi gjøre de samme tingene vi har gjort tidligere.
+
+* Skriv `pwd` for å se hvor i mappestrukturen vi er
+* Skriv `ls` for å se hva som befinner seg i mappa vi er inne i
+* Skriv `mkdir [ditt navn]` for å lage en mappe med ditt navn.
+* `ls` vil vise at mappen nå finnes
+* `cd mappenavn` vil flytte deg inn i mappen
+
+---
+
+# Eksempel: Administrere filer
+
+* Skriv `pwd` for å sjekke at du nå er inne i din egen mappe
+* Skriv `touch mintestfil.txt` for å lage en tom testfil
+* Skriv `rm mintestfil.txt` for å slette filen.
+
+---
+
+# Eksempel: Administrere filer
+
+* Skriv `pwd` for å sjekke at du nå er inne i din egen mappe
+* Skriv `touch mintestfil.txt` for å lage en tom testfil
+* Skriv `rm mintestfil.txt` for å slette filen.
+
+NB! Når man sletter ting via kommandolinja så havner de ikke i noen papirkurs. Vært derfor forsiktig med når dere bruker `rm`.
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
