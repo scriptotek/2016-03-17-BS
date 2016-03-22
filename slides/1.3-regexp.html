@@ -13,7 +13,7 @@ class: center, middle, inverse
 # Regulære uttrykk
 Biblioteksløyd 2016-03-17
 
-.footnote[Slides: https://scriptotek.github.io/2016-03-17-BS/slides/1.3-regexp.html]
+.footnote[https://scriptotek.github.io/2016-03-17-BS/slides/1.3-regexp.html]
 
 ---
 
@@ -41,6 +41,91 @@ Biblioteksløyd 2016-03-17
 # Prøv
 
 - http://www.regexr.com/
+
+---
+
+# Oppgave 1
+
+I filen `sample.csv`: Finn alle linjer som *begynner* med `020`
+
+Tips:
+- `^` matcher begynnelsen av linjen
+
+???
+
+Svar: `^020`
+
+---
+
+# Oppgave 2
+
+I filen `sample.csv`: Finn alle forekomster av `no-ubo-mn` eller `noubomn`.
+
+Tips:
+- Bruk `?` med bindestrekene for match 0 eller 1 ganger
+
+???
+
+Svar: `no-?ubo-?mn`
+
+---
+
+# Oppgave 3
+
+I filen `sample.csv`: Finn alle etternavn på fire bokstaver
+
+Tips:
+- I denne oppgaven kan du anta at etternavnene kun inneholder `a-zA-Z` eller `\w`
+- Bruk `{4}` for å angi antall ganger
+
+???
+
+Svar: `\w{4},`
+
+---
+
+# Oppgave 4
+
+I filen `sample.mrc` vil du fjerne alle andre delfelt enn `$a`.
+- Merk at `$` i regex betyr "slutten av linja", så for å faktisk matche dollar-tegnet må du "escape" det ved å legge på en backslash (`\`) foran, slik: `\$`
+
+Tips:
+- `[abc]` matcher `a`, `b` eller `c`
+- `[^abc]` matcher alt annet enn `a`, `b` eller `c`
+- `.` (punktum) matcher ethvert tegn bortsett fra linjeskift
+- `*` : 0 eller flere ganger, `+` 1 eller flere ganger, `?` 0 eller 1 gang
+
+???
+
+- Svar: `\$[^a] .*`
+
+---
+
+# Oppgave 5
+
+2. Finne alle tagger i et html-dokument.
+
+???
+
+Svar: `</?[^>]+>`
+
+---
+
+# Oppgave 6
+
+alma-records.marc21.xml inneholder 50 marc21-poster. Hvor mange av dem har språkkode "nob" i posisjon 35-37 i 008-feltet?
+
+Tips:
+- bruk `.` for å matche de 35 foregående tegnene
+- `{}` for å angi antall tegn (35).
+
+???
+
+- Svar: `"008">.{35}nob`
+
+
+
+---
 
 
 
