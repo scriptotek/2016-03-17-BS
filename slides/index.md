@@ -48,7 +48,7 @@ root: ..
 - [Presentasjon som PDF](2.3-openrefine.pdf) / [Presentasjon som PPTX](2.3-openrefine.pptx)
 - [Using Open Refine to Update, Clean up, and Link Your Metadata to the Wider World](https://www.youtube.com/watch?v=E-NbMR3_MRw) (YouTube-presentasjon som blant annet viser clustering. Av Sarah Weeks, Elissah Becknell, ALA)
 
-### Fortsettelsen...
+### Mulige fortsettelser...
 
 * [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages/) = GitHub for å hoste enkle nettsider. Siden du ser på nå bruker GitHub Pages. For et annet eksempel, se workshopdeltaker @fjuell sitt repo [https://github.com/fjuell/fjuell.github.io](https://github.com/fjuell/fjuell.github.io) som blir til [https://fjuell.github.io/bm.html](https://fjuell.github.io/bm.html)
 
