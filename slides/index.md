@@ -21,6 +21,7 @@ root: ..
 ### 1.3 Ren tekst og redigering med Sublime Text
 
 - [Presentasjon som HTML](1.3-text.html)
+- [The Programming Historian: Sustainable Authorship in Plain Text using Pandoc and Markdown](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
 
 ### 1.4 Regulære uttrykk
 
@@ -50,7 +51,7 @@ root: ..
 
 ### Mulige fortsettelser...
 
-* [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages/) = GitHub for å hoste enkle nettsider. Siden du ser på nå bruker GitHub Pages. For et annet eksempel, se workshopdeltaker @fjuell sitt repo [https://github.com/fjuell/fjuell.github.io](https://github.com/fjuell/fjuell.github.io) som blir til [https://fjuell.github.io/bm.html](https://fjuell.github.io/bm.html)
+- [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages/) = GitHub for å hoste enkle nettsider. Siden du ser på nå bruker GitHub Pages. For et annet eksempel, se workshopdeltaker @fjuell sitt repo [https://github.com/fjuell/fjuell.github.io](https://github.com/fjuell/fjuell.github.io) som blir til [https://fjuell.github.io/bm.html](https://fjuell.github.io/bm.html)
 
 #### Om å lære å kode:
 
