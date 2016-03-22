@@ -24,4 +24,6 @@ markdown        : kramdown
 kramdown        :
   entity_output : as_input # &mdash; is output as &mdash;
   smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
-exclude         : [tools]
+exclude         :
+  - tools
+  - slides/node_modules

@@ -23,22 +23,31 @@ du kan skrive slide notes her
 
 # Hva vi skal lære
 
-1. Enkel bruk av kommandolinjeverktøy
+1. Enkel bruk av kommandolinjeverktøy for å administrere filer
 
 ---
 
 # Hva vi skal lære
 
-1. Enkel bruk av kommandolinjeverktøy
+1. Enkel bruk av kommandolinjeverktøy for å administrere filer
 1. Bruk av WinSCP for å kopiere filer til/fra andre maskiner
 
 ---
 
 # Hva vi skal lære
 
-1. Enkel bruk av kommandolinjeverktøy
+1. Enkel bruk av kommandolinjeverktøy for å administrere filer
 1. Bruk av WinSCP for å kopiere filer til/fra andre maskiner
-1. Bruk av Putty for å kopiere filer til/fra andre maskiner
+1. Bruk av Putty for å administrere filer på ekstern maskin
+
+---
+
+# Hva vi skal lære
+
+1. Enkel bruk av kommandolinjeverktøy for å administrere filer
+1. Bruk av WinSCP for å kopiere filer til/fra andre maskiner
+1. Bruk av Putty for å administrere filer på ekstern maskin
+1. (Hvis tid: Bruk av Git på kommandolinja)
 
 ---
 
@@ -76,7 +85,7 @@ Eksempler:
 
 # Bash
 
-* Bash er et kommandolinjeverktøy som kommer med de fleste Linux-versjoner, og er kanskje det mest brukte kommandolinjeverktøyet.
+* Bash er kanskje det mest brukte kommandolinjeverktøyet.
 
 * Bash kommer med de fleste Linux-varianter. Det er bash man som oftest bruker når man åpner en terminal i Linux.
 
@@ -128,9 +137,9 @@ Eksempler:
 
 # Oppsummering
 
-Vi brukt flere ulike kommandoer for å gjøre ting i kommandolinja. La oss ta en oppsummering:
+Vi har  så langt brukt flere kommandoer for å gjøre ting. La oss ta en oppsummering:
 
-1. `ls`: List. Viser hva som finnes hva du er.
+1. `ls`: List. Viser hva som finnes der du er.
 1. `pwd`: Print Working Directory. Viser hvor du er i mappestrukturen.
 1. `touch`: Lager en tom fil.
 1. `mkdir`: Make directory. Lager en mappe.
@@ -281,6 +290,22 @@ Nå som vi er kobla inn på kommandolinja på serveren, kan vi gjøre de samme t
 * Skriv `rm mintestfil.txt` for å slette filen.
 
 NB! Når man sletter ting via kommandolinja så havner de ikke i noen papirkurs. Vært derfor forsiktig med når dere bruker `rm`.
+
+---
+
+# Git på kommandolinja
+
+For å starte et repository i en mappe bruker vi `git init`.
+
+For å fortsette på et repository som finner på Github - for å få det "repoet" over på egen maskin, kan vi bruke `git clone repo_url`. Eksempel:
+
+1. Lag en mappe: `mkdir ub-kurs`  
+1. Gå inn i mappen: `cd ub-kurs`  
+1. "Klon" (last ned) repoet hit: `git clone https://github.com/stianlagstad/ub-kurs-test .`
+
+???
+
+se http://rogerdudler.github.io/git-guide/
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>

@@ -1,0 +1,47 @@
+
+<!--
+Åpne tre nettleser-vinduer og bruk disse lenkene:
+
+https://services.biblionaut.net/metadata/bookmooch.php?id=0199291144
+https://biblionaut.net/~kyrre/carp/
+https://services.biblionaut.net/sru_iteminfo.php?objektid=060510900
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Jquery er et javascript-bibliotek som gjør det enklere å programmere i javascript -->
+		<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+
+		<!-- Her kommer jquery-biten (dvs alt det tekniske) -->
+		<script>
+			$(document).ready(function() {	//Venter til nettsiden vår er lastet inn
+
+				//Gjør et api-kall etter dokumentet med objektid 060510900
+				$.getJSON("https://services.biblionaut.net/sru_iteminfo.php?objektid=060510900", function(book){}).done(function(book){
+					//Stapp det som kommer ut inn i varablen 'book' og putt title, author og isbn inn i html
+					$("#title").html(book.title);
+					$("#name").html(book.authors[0].name);
+					$("#isbn").html(book.isbns[1]);
+
+					//Her gjøres et nytt kall til bookmooch ved å bruke det andre isbn i lista (0199291144) - altså book.isbns[1];
+					$.getJSON("https://services.biblionaut.net/metadata/bookmooch.php?id="+book.isbns[1], function(metadata) {
+						//Stapp det som kommer ut inn i variablen 'metadata' og vis middels stort bilde, og lang beskrivelse
+
+						$("#cover").html('<img src='+metadata[0].medium_image+'>');
+						$("#description").html(metadata[0].long_desc);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Det er enkelt å bruke API!</h1>
+		<!-- her er ren HTML  obs, det er viktig at de har id="title", id="name" osv -->
+		<div id="title"></div>
+		<div id="name"></div>
+		<div id="isbn"></div>
+		<div id="cover"></div>
+		<div id="description"></div>
+	</body>
+</html>
